@@ -3,7 +3,7 @@ for i in 1..10
   break if i == 5
 end
 
-puts "\n Loop exited with break !"
+puts "\n Loop exited with break !\n\n"
 
 
 # ----Output------
@@ -15,3 +15,21 @@ puts "\n Loop exited with break !"
 # Current number is 5
 
 #  Loop exited with break !
+
+
+for i in 1..5
+  puts "Outer loop : i = #{i}"
+
+  for j in 1..5 
+    puts "Inner loop : j = #{j}"
+
+    if i *j >= 6
+      puts "Breaking out of both loop because i*j = #{i*j}"
+      break
+    end
+  end 
+
+    break if i * j >= 6
+end
+
+puts "Loop exited with break! "  
